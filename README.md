@@ -1,4 +1,4 @@
-# Ambari Shell
+# Ambari Shell in a Docker container
 
 This docker image aims to get you started with ambari.
 
