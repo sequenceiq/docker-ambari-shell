@@ -35,8 +35,11 @@ To run ambari shell, you just start a yet another docker container:
 ```
 AMBARI_IP=$(docker inspect --format "{{.NetworkSettings.IPAddress}}" ambari-singlenode)
 docker run -it --rm  sequenceiq/ambari-shell --ambari.host=$AMBARI_IP
+```
 
-
+Once the shell is started you will see the following banner
+```
+    _                _                   _  ____   _            _  _
    / \    _ __ ___  | |__    __ _  _ __ (_)/ ___| | |__    ___ | || |
   / _ \  | '_ ` _ \ | '_ \  / _` || '__|| |\___ \ | '_ \  / _ \| || |
  / ___ \ | | | | | || |_) || (_| || |   | | ___) || | | ||  __/| || |
