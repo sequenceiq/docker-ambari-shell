@@ -1,6 +1,11 @@
-# Ambari Shell in a Docker container
+# Ambari and Ambari Shell in Docker
 
-This docker image aims to get you started with ambari.
+This docker image aims to get you started with ambari. You will star 2 docker
+conatiners:
+
+- Ambari server: `ambari-server` and `ambari-agent` running in the same container
+- Ambari Shell: the new command line interface for communicating with Ambari Server.
+Also running in a container.
 
 ## requirement
 
