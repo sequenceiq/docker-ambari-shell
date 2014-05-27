@@ -4,7 +4,7 @@ This docker image aims to get you started with ambari. You will star 2 docker
 conatiners:
 
 - Ambari server: `ambari-server` and `ambari-agent` running in the same container
-- Ambari Shell: the new command line interface for communicating with Ambari Server.
+- [Ambari Shell](https://github.com/sequenceiq/ambari-shell): the new command line interface for communicating with Ambari Server.
 Also running in a container.
 
 ## requirement
