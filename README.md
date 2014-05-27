@@ -1,11 +1,6 @@
 # Ambari and Ambari Shell in Docker
 
-This docker image aims to get you started with ambari. You will star 2 docker
-conatiners:
-
-- Ambari server: `ambari-server` and `ambari-agent` running in the same container
-- [Ambari Shell](https://github.com/sequenceiq/ambari-shell): the new command line interface for communicating with Ambari Server.
-Also running in a container.
+This docker image aims to get you started with [Ambari Shell](https://github.com/sequenceiq/ambari-shell)
 
 ## requirement
 
@@ -14,7 +9,20 @@ haven't installed it yet, you need to get out from under that rock
 you've been living, and read the
 [installation](http://docs.docker.io/introduction/get-docker/) guide.
 
-## start ambari server
+## Get an Ambari Server url
+
+You need a running Ambari Server where you can connect with ambari shell.
+You either:
+- Have an already running Ambari Server, for example HDP sandbox.
+- You need an Ambari Server **sandbox** you can easily play with, and than discard.
+
+### Option-A: BYOA (Bring You Own Ambari)
+
+```
+docker run -it --rm  sequenceiq/ambari-shell --ambari.host=<HOSTNAME> --ambari.port=<PORT>
+```
+
+### Option-B: Start an Ambari Server sandbox
 
 You can start a single-node ambari "cluster", with agent and server running
 in the same container:
@@ -23,7 +31,7 @@ in the same container:
 docker run -d -P -h server.ambari.com --name ambari-singlenode  sequenceiq/ambari
 ```
 
-## wait for ambari server
+## Wait for ambari server
 
 Ambari server needs some time to start up. It will respond with `RUNNING` on the
 REST endpoint: `/api/v1/check`. You either wait for 10-20 sec, or
@@ -33,7 +41,7 @@ if you prefer to watch a growing dotted line in your terminal:
 while ! curl --connect-timeout 2 -u admin:admin -H 'Accept: text/plain' $(docker inspect --format "{{.NetworkSettings.IPAddress}}" ambari-singlenode):8080/api/v1/check 2>/dev/null |grep RUNNING &>/dev/null; do echo -n .; sleep 1; done
 ```
 
-## start ambari-shell
+## Start ambari-shell
 
 To run ambari shell, you just start a yet another docker container:
 
