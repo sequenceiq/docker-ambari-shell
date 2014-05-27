@@ -40,6 +40,7 @@ if you prefer to watch a growing dotted line in your terminal:
 ```
 while ! curl --connect-timeout 2 -u admin:admin -H 'Accept: text/plain' $(docker inspect --format "{{.NetworkSettings.IPAddress}}" ambari-singlenode):8080/api/v1/check 2>/dev/null |grep RUNNING &>/dev/null; do echo -n .; sleep 1; done
 ```
+_Note: if you are running docker with boot2docker you should add routing - e.g. sudo route add 172.17.0.0/16 192.168.88.101_
 
 ## Start ambari-shell
 
