@@ -2,7 +2,7 @@
 
 This docker image aims to get you started with [Apache Ambari](http://ambari.apache.org/) and [Ambari Shell](https://github.com/sequenceiq/ambari-shell)
 
-## ;TLDR
+## TL;DR
 for the impatient, here is how you bring up a single-node ambari 'cluster', and
 use a blueprint to install services
 ```
