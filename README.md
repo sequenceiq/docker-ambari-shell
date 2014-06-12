@@ -1,7 +1,19 @@
 # Ambari and Ambari Shell in Docker
 
-This docker image aims to get you started with [Ambari Shell](https://github.com/sequenceiq/ambari-shell)
+This docker image aims to get you started with [Apache Ambari](http://ambari.apache.org/) and [Ambari Shell](https://github.com/sequenceiq/ambari-shell)
 
+## ;TLDR
+for the impatient, here is how you bring up a single-node ambari 'cluster', and
+use a blueprint to install services
+```
+docker run -d -p 8080 -h amb0.mycorp.kom --name ambari-singlenode sequenceiq/ambari --tag ambari-server=true
+docker run -e BLUEPRINT=single-node-hdfs-yarn --link ambari-singlenode:ambariserver -it --rm --entrypoint /bin/sh sequenceiq/ambari-shell -c /tmp/install-cluster.sh
+```
+
+or if you want to have a **one-liner** which fits into a twitter message:
+```
+curl -Ls j.mp/ambari-singlenode | bash -x
+```
 ## requirement
 
 The only software you need is [docker](docker.io). If you
@@ -65,7 +77,7 @@ docker run -e AMBARI_HOST=172.19.0.45 -e EXPECTED_HOST_COUNT=2 -it --rm --entryp
 
 DevOps first please! So the description of the automated cluster installation goes like:
 ```
-docker run -e BLUEPRINT=single-node-hdfs-yarn -it --rm --entrypoint /bin/sh sequenceiq/ambari-shell -c /tmp/install-cluster.sh
+docker run -e BLUEPRINT=single-node-hdfs-yarn --link amb0:ambariserver -it --rm --entrypoint /bin/sh sequenceiq/ambari-shell -c /tmp/install-cluster.sh
 ```
 
 ## Start ambari-shell

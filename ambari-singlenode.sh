@@ -1,0 +1,10 @@
+:<<USAGE
+########################################
+curl -Ls j.mp/ambari-singlenode | bash -x
+########################################
+
+full documentation: https://github.com/sequenceiq/docker-ambari-shell
+USAGE
+
+docker run -d -p 8080 -h amb0.mycorp.kom --name ambari-singlenode sequenceiq/ambari --tag ambari-server=true
+docker run -e BLUEPRINT=single-node-hdfs-yarn --link ambari-singlenode:ambariserver -it --rm --entrypoint /bin/sh sequenceiq/ambari-shell -c /tmp/install-cluster.sh
