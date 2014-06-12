@@ -1,6 +1,6 @@
 :<<USAGE
 ########################################
-curl -Ls j.mp/ambari-singlenode | bash -x
+curl -LOs j.mp/ambari-singlenode && . ambari-singlenode
 ########################################
 
 full documentation: https://github.com/sequenceiq/docker-ambari-shell
