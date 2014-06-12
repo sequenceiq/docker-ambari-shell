@@ -12,7 +12,7 @@ docker run -e BLUEPRINT=single-node-hdfs-yarn --link ambari-singlenode:ambariser
 
 or if you want to have a **one-liner** which fits into a twitter message:
 ```
-curl -Ls j.mp/ambari-singlenode | bash -x
+curl -LOs j.mp/ambari-singlenode && . ambari-singlenode
 ```
 ## requirement
 
