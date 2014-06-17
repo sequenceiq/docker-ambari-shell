@@ -14,9 +14,9 @@ or if you want to have a **one-liner** which fits into a twitter message:
 ```
 curl -LOs j.mp/ambari-singlenode && . ambari-singlenode
 ```
-## requirement
+## Requirement
 
-The only software you need is [docker](docker.io). If you
+The only software you need is [Docker](docker.io). If you
 haven't installed it yet, you need to get out from under that rock
 you've been living, and read the
 [installation](http://docs.docker.io/introduction/get-docker/) guide.
