@@ -25,7 +25,7 @@ you've been living, and read the
 
 You need a running Ambari Server where you can connect with ambari shell.
 You either:
-- Have an already running Ambari Server, for example HDP sandbox.
+- Have an already running Ambari Server, for example [HDP](http://hortonworks.com/products/hortonworks-sandbox/) sandbox.
 - You need an Ambari Server **sandbox** you can easily play with, and than discard.
 
 ### Option-A: Ambari Server on docker
