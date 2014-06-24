@@ -1,5 +1,5 @@
 FROM dockerfile/java
-MAINTAINER MAINTAINER SequenceIQ
+MAINTAINER SequenceIQ
 
 RUN curl -Ls https://raw.githubusercontent.com/sequenceiq/ambari-shell/master/latest-snap.sh | bash
 ADD install-cluster.sh /tmp/
