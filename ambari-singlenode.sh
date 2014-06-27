@@ -1,6 +1,8 @@
 :<<USAGE
 ########################################
 curl -LOs j.mp/ambari-singlenode && . ambari-singlenode
+  or
+wget j.mp/ambari-singlenode -O ambari-singlenode && . ambari-singlenode
 ########################################
 
 full documentation: https://github.com/sequenceiq/docker-ambari-shell
