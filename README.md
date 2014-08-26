@@ -101,7 +101,7 @@ Welcome to Ambari Shell. For command and param completion press TAB, for assista
 ambari-shell>
 ```
 
-## create a cluster
+## Create a cluster
 
 Now ambari shell is connected to the server and waits for you commands.
 The `hint` command can guide you through the process of creating a cluster, but
