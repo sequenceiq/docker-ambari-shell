@@ -55,7 +55,7 @@ if you prefer to watch a growing dotted line in your terminal:
 we have a script prepared inside of the docker image
 
 ```
-docker run --link amb0:ambariserver -e EXPECTED_HOST_COUNT=1 -it --rm --entrypoint /bin/sh shell -c /tmp/wait-for-host-number.sh
+docker run --link amb0:ambariserver -e EXPECTED_HOST_COUNT=1 -it --rm --entrypoint /bin/sh sequenceiq/ambari-shell -c /tmp/wait-for-host-number.sh 
 ```
 Notable parameters
 
